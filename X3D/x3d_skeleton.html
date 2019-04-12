@@ -1,0 +1,56 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <title>X3D</title>
+    <script type="text/javascript" 
+            src="http://x3dom.org/download/dev/x3dom.js">
+    </script>
+    <link rel="stylesheet" type="text/css" 
+          href="http://x3dom.org/download/dev/x3dom.css">
+</head>
+<body>
+<X3D width="800" height="500">
+    <Scene>
+        <Viewpoint position="0 5.2 11.3" orientation="1.0 0.0 0.0 -0.33">
+        </Viewpoint> <!-- Camera -->
+        
+        <!-- Coordinate system with grid -->
+        <Shape DEF="CoordSys">
+            <Appearance sortKey="1">
+                <LineProperties linewidthScaleFactor="2">
+                </LineProperties> <!-- works only on *nix -->
+            </Appearance>
+            <LineSet>
+                <Coordinate point="-8 0.0 0.0, 14 0.0 0.0, 0.0 -6 0.0, 0.0 7 0.0, 0.0 0.0 -6, 0.0 0.0 7">
+                </Coordinate>
+                <Color color="1 0 0, 1 0 0, 0 1 0, 0 1 0, 0 0 1, 0 0 1">
+                </Color>
+            </LineSet>
+        </Shape>
+        <Group render="FALSE"> <!-- make visible if needed -->
+            <Shape DEF="Grid" isPickable="false">
+                <Appearance sortKey="-1">
+                    <Material emissiveColor='0.5 0.5 0.5'>
+                    </Material>
+                </Appearance>
+                <Plane solid="false" size='20 10' 
+                       primType='LINES' subdivision='40 20'>
+                </Plane>
+            </Shape>
+        </Group>
+        <Transform rotation="1 0 0 -1.570796" render="TRUE">
+            <Shape USE="Grid"></Shape>
+        </Transform>
+        <Transform rotation="0 1 0 -1.570796" render="FALSE"> 
+            <Shape USE="Grid"></Shape>
+        </Transform>
+        
+        <!-- Uebungsaufgabe(n) -->
+        <Transform id='myTrafo'>
+            <!-- TODO -->
+        </Transform>
+    </Scene>
+</X3D>
+</body>
+</html>

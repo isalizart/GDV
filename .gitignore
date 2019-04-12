@@ -1,0 +1,55 @@
+# Temp stuff
+.DS_Store
+*.tmproj
+*.bak
+*.pyc
+#*.db
+*~backup~
+*~
+#*#
+desktop.ini
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Visual Studio Stuff
+*.ilk
+*.pdb
+*.log
+*.iobj
+*.ipdb
+*.filters
+*.idb
+*.tlog
+*.tlog/
+*.lastbuildstate
+
+*.sdf
+*.user
+*.suo
